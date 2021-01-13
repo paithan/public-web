@@ -568,6 +568,8 @@ properties.addBlogLink("http://combinatorialgametheory.blogspot.com/2010/02/game
 
 properties.addPlayableLink(getPublicFileLink("combGames/domineering.html"), "HTML");
 
+properties.addAlias("Crosscram"); //mentioned in Winning Ways (first page of chapter 5)
+
 
  
 //Cram
@@ -1179,7 +1181,7 @@ var properties = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial
 
 properties.addBriefDescription("Played on a graph.  Move: choose one vertex and remove it and all direct neighbors.");
 
-properties.setImage("http://www.ics.uci.edu/~eppstein/0xDE/300px-Well-covered_graph.png");
+properties.setImage("https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Independent_set_graph.svg/240px-Independent_set_graph.svg.png");
 
 //properties.addBlogLink("http://combinatorialgametheory.blogspot.com/2010/02/game-description-...html");
 
@@ -1470,7 +1472,7 @@ var properties = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial
 
 properties.addAlias("Reversi");
 
-properties.setImage("http://img.brothersoft.com/screenshots/softimage/o/othello-7114-1236913310.jpeg");
+properties.setImage("https://upload.wikimedia.org/wikipedia/commons/2/20/Othello-Standard-Board.jpg");
 
 properties.addPlayableLink("http://hewgill.com/othello/", "JavaScript");
 
@@ -1512,7 +1514,7 @@ var properties = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial
 
 properties.addAlias("Ndengrod");
 
-properties.setImage("http://cameronius.com/games/pentalath/ndengrod-capture-1.png");
+properties.setImage("http://cambolbro.com/games/pentalath/ndengrod-capture-1.png");
 
 properties.addBriefDescription("Five in a row wins; enemy pieces are removed if their contiguous group is not adjacent to an open space.");
 
@@ -1555,6 +1557,7 @@ var otherProperties = document.createTextNode(" ");
 var properties = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial, isShortNode, winnerFromStart, computationalComplexity, otherProperties);
 
 properties.setImage("http://ramos.elo.utfsm.cl/~lsb/elo320/aplicaciones/aplicaciones/CS460AlgorithmsandComplexity/lecture25/COMP460%20Algorithms%20and%20Complexity%20Lecture%2025_archivos/npc3a.gif");
+
 
 properties.addAlias("Formula Game");
 
@@ -1744,7 +1747,7 @@ var computationalComplexity = createLink("PSPACE-complete on planar graphs", "ht
 var otherProperties = document.createTextNode(" ");
 var properties = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial, isShortNode, winnerFromStart, computationalComplexity, otherProperties);
 
-properties.setImage("https://cf.geekdo-images.com/images/pic332409_t.jpg");
+properties.setImage("https://cf.geekdo-images.com/tYxS-l2Z8FkehH7eIQFY9A__itemrep/img/tn0-_WlInvsFeR37rPMbEgW4AiY=/fit-in/246x300/filters:strip_icc()/pic332409.jpg");
 
 properties.addBriefDescription("Alternate moving the token, but not to a previously-occupied space.  Win by moving to your goal space.");
 
@@ -2052,7 +2055,7 @@ rulesetPropertiesList.push(properties); /* */
 /////////////////// 
 //Yavalath
 var rulesetName = "Yavalath";
-var rulesetInfoHref = "http://cameronius.com/games/yavalath/";
+var rulesetInfoHref = "http://cambolbro.com/games/yavalath/";
 var isImpartial = false;
 var isShortNode = RulesetProperties.createLengthNode(true);
 var winnerFromStart = document.createTextNode("?");
@@ -2060,7 +2063,7 @@ var computationalComplexity = document.createTextNode("In PSPACE");
 var otherProperties = document.createTextNode(" ");
 var properties = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial, isShortNode, winnerFromStart, computationalComplexity, otherProperties);
 
-properties.setImage("http://cf.geekdo-images.com/images/pic285594_t.jpg");
+properties.setImage("http://cambolbro.com/games/yavalath/h.yav-game-c.png");
 
 properties.addBriefDescription("Four-in-a-row wins, but can't have three-in-a-row without the fourth.");
 
@@ -2081,7 +2084,7 @@ var properties = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial
 
 properties.addBriefDescription("Winner is the player with the least number of connected components.  Each turn add one or two pieces of either color, with the restriction that there must be a total odd number of connected components.");
 
-properties.setImage("http://cf.geekdo-images.com/images/pic1186963_t.jpg"); 
+properties.setImage("https://cf.geekdo-images.com/BJVAnW9Sn3uHj0XV8gbGjQ__itemrep/img/tAspUreiRwYxukChMS7O0Gg4jNs=/fit-in/246x300/filters:strip_icc()/pic1186963.jpg"); 
 
 rulesetPropertiesList.push(properties); 
 
