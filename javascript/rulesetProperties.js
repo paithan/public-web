@@ -5,6 +5,9 @@ var THIS_SITE = "http://turing.plymouth.edu/~kgb1013/rulesetTable.php";
 
 
 //TODO: I should do this for more paper citations.  That way if I need to change it, it will work for them all.
+GONC5 = "http://library.msri.org/books/Book70/contents.html";
+
+BURKE_GEORGE_2019 = GONC5;
 BURKE_HEARN_2018 = "https://doi.org/10.1007/s00182-018-0628-8";
 DUCHENE_RENAULT_2014 = "https://doi.org/10.1016/j.tcs.2013.11.025"; //Vertex Nim played on graphs
 FUKUYAMA_2003 = "https://doi.org/10.1016/S0304-3975(03)00292-5"; //A Nim game played on graphs
@@ -827,7 +830,7 @@ var rulesetInfoHref = "http://dx.doi.org/10.1016/j.tcs.2013.11.025";
 var isImpartial = true;
 var isShortNode = RulesetProperties.createLengthNode(true);
 var winnerFromStart = document.createTextNode("Varies");
-var computationalComplexity = createElementWithChildren("span", ["In EXPTIME, Normal play: ", createLink("PSPACE-hard with loops", "http://arxiv.org/abs/1101.1507"), ", Misère play: ", createLink("PSPACE-hard", RENAULT_SCHMIDT_2015)]);
+var computationalComplexity = createElementWithChildren("span", ["In EXPTIME, Normal play: ", createLink("PSPACE-hard with loops", BURKE_GEORGE_2019), ", Misère play: ", createLink("PSPACE-hard", RENAULT_SCHMIDT_2015)]);
 var otherProperties = document.createTextNode(" ");
 
 var variant = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial, isShortNode, winnerFromStart, computationalComplexity, otherProperties);
@@ -1189,7 +1192,7 @@ rulesetPropertiesList.push(properties);
 
 //Kayles variant: Bowling Kayles
 var rulesetName = "Bowling Kayles";
-var rulesetInfoHref = "http://en.wikipedia.org/wiki/Kayles";
+var rulesetInfoHref = "https://www.gutenberg.org/files/27635/27635-h/27635-h.htm#Page_118";
 var isImpartial = true;
 var isShortNode = RulesetProperties.createLengthNode(true);
 var winnerFromStart = document.createTextNode("First player (more than zero pins).");
