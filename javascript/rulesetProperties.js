@@ -1160,6 +1160,25 @@ properties.addVariant(variant);
 //end of Hex
 
 
+////////////////////////////////// 
+//Hey That's My Fish
+var rulesetName = "Hey That's My Fish";
+var rulesetInfoHref = "https://boardgamegeek.com/boardgame/8203/hey-s-my-fish";
+var isImpartial = false;
+var isShortNode = RulesetProperties.createLengthNode(true);
+var winnerFromStart = document.createTextNode("Random Starting Positions");
+var computationalComplexity = "?";
+var otherProperties = document.createTextNode("Scoring Game.\nHas every value born by day 2.", "https://ipsj.ixsq.nii.ac.jp/ej/?action=repository_uri&item_id=199970&file_id=1&file_no=1");
+var properties = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial, isShortNode, winnerFromStart, computationalComplexity, otherProperties);
+
+properties.setImage("https://upload.wikimedia.org/wikipedia/commons/7/7e/Deskohran%C3%AD_08s4_075_-_Hey%21_That%27s_My_Fish%21.jpg");
+
+
+properties.addBriefDescription("Partisan Penguins move around on a hexagonal board.  Each turn consists of moving one penguin as many spaces as the player wants in one direction, without hopping over empty spaces or opposing penguins.  After moving, the player removes the tile the penguin started on, adding to their score the number of fish that were on that tile.");
+
+rulesetPropertiesList.push(properties);
+
+
 ///////////////////
 // <I>
 
