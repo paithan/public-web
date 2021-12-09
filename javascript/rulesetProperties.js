@@ -282,7 +282,7 @@ rulesetPropertiesList.push(properties);
 
 /////////////////////////////////////////////////
 //Atropos
-var properties = new RulesetProperties("Atropos", "http://www4.wittenberg.edu/academics/mathcomp/kburke/atropos/", true, RulesetProperties.createLengthNode(true), document.createTextNode("Open!  Conjecture: N (\"fuzzy\") iff there are an even number of open circles."), createTextLink("PSPACE-complete", "http://link.springer.com/chapter/10.1007%2F978-3-540-77105-0_49"), document.createTextNode(" "));
+var properties = new RulesetProperties("Atropos", "combGames/atropos.html", true, RulesetProperties.createLengthNode(true), document.createTextNode("Open!  Conjecture: N (\"fuzzy\") iff there are an even number of open circles."), createTextLink("PSPACE-complete", "http://link.springer.com/chapter/10.1007%2F978-3-540-77105-0_49"), document.createTextNode(" "));
 
 properties.addBriefDescription("Position: triangular array of circles with border pre-colored and last-played circle.  Move: color one uncolored circle any of the three colors.  If there are circles adjacent to the last one, must choose one of them.  Otherwise, play anywhere.");
 
@@ -980,6 +980,26 @@ var variant = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial, i
 properties.addVariant(variant);
 
 
+ 
+
+//////////////////////////
+//Grundy's Game
+var rulesetName = "Grundy's Game";
+var rulesetInfoHref = "https://en.wikipedia.org/wiki/Grundy%27s_game";
+var isImpartial = true;
+var isShortNode = RulesetProperties.createLengthNode(true);
+var winnerFromStart = "varies";
+var computationalComplexity = "?";
+var otherProperties = " ";
+var properties = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial, isShortNode, winnerFromStart, computationalComplexity, otherProperties);
+
+
+variant.addBriefDescription("On a list of piles of objects, a player may split any pile into two new piles with different numbers of tokens.");
+
+
+rulesetPropertiesList.push(properties);
+
+
 ///////////////////
 // <H>
 
@@ -1425,6 +1445,22 @@ variant.addBriefDescription("A circular Nim game is a two player impartial combi
 
 properties.addVariant(variant); /* */
 
+
+//Nim variant: Gale's Nim
+var rulesetName = "Gale's Nim";
+var rulesetInfoHref = null;
+var isImpartial = true;
+var isShortNode = RulesetProperties.createLengthNode(true);
+var winnerFromStart = document.createTextNode("?");
+var computationalComplexity = document.createTextNode("In EXPTIME");
+
+var variant = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial, isShortNode, winnerFromStart, computationalComplexity, otherProperties);
+
+variant.addBriefDescription("Gale's Nim (X, Y) is the same as Nim played on X heaps, except that the game ends when there are only Y remaining non-zero piles.  Gale's Game is the special case of this when Y = 1.  (Nim is the special case when Y = 0.)"); 
+
+properties.addVariant(variant); /* */
+
+
 //Nim variant: Penultimate Nim
 var rulesetName = "Penultimate Nim";
 var rulesetInfoHref = null;
@@ -1454,6 +1490,8 @@ var variant = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial, i
 variant.addBriefDescription("Initial position: n x m grid of dots.  Move: remove any amount of dots all parallel to one of the axes.  (Doesn't have to be contiguous.)"); 
 
 properties.addVariant(variant); /* */
+
+
  
 //////////////////////// 
 //NoGo
@@ -1871,43 +1909,82 @@ var variant = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial, i
 properties.addVariant(variant);
 
 
-///////////////////
-// <T>
- 
 
-///////////////////////////////// 
-//Take-Away
-var rulesetName = "Take-Away";
-var rulesetInfoHref = null;
+
+ 
+///////////////////////// 
+//Subtraction Game
+var rulesetName = "Subtraction (Game)";
+var rulesetInfoHref = "https://en.wikipedia.org/wiki/Subtraction_game";
 var isImpartial = true;
 var isShortNode = RulesetProperties.createLengthNode(true);
-var winnerFromStart = document.createTextNode("Depends on the subtraction set and the pile size.");
-var computationalComplexity = toNode("Varies.  Easy (in P) when the subtraction set is a complete range.");
-var otherProperties = document.createTextNode(" ");
+var winnerFromStart = "Either player";
+var computationalComplexity = createLink("Single pile of n's outcome class is in O(n log^2(n), which is polynomial in n, and exponential in the bit-complexity.", "https://doi.org/10.4230%2Flipics.fun.2018.20");
+var otherProperties = "";
 var properties = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial, isShortNode, winnerFromStart, computationalComplexity, otherProperties);
 
-properties.addAlias("Subtraction Game");
+properties.addAlias("Take Away");
 properties.addAlias("Nim (one pile)");
 
-properties.addBriefDescription("Single-pile Nim, but restricted to a set of possible numbers you can take.");
+properties.addBriefDescription("Played on a pile of tokens and a \"subtraction set\" of numbers.  Each turn consists of selecting one of the numbers in the set and removing that many tokens from the pile.");
 
 rulesetPropertiesList.push(properties);
 
-//Take-Away variant: Fibonacci Nim 
+
+//variants
+
+//Subtraction variant: Fibonacci Nim 
 var rulesetName = "Fibonacci Nim";
-var rulesetInfoHref = null;
+var rulesetInfoHref = "https://en.wikipedia.org/wiki/Fibonacci_nim";
 var isImpartial = true;
 var isShortNode = RulesetProperties.createLengthNode(true);
-var winnerFromStart = document.createTextNode("Depends on the Zeckendorf representation of the current number.  Best move is to take the smallest number in the representation.  (I don't recall exactly when you lose.)");
-var computationalComplexity = toNode("? How long does it take to find the Zeckendorf representation?");
-var otherProperties = document.createTextNode(" ");
+var winnerFromStart = "Depends on the Zeckendorf representation of the current number.  Best move is to take the smallest number in the representation.  (I don't recall exactly when you lose.)";
+var computationalComplexity = "? How long does it take to find the Zeckendorf representation?";
+var otherProperties = "";
 
 var variant = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial, isShortNode, winnerFromStart, computationalComplexity, otherProperties);
 
 variant.addBriefDescription("Each turn, the subtraction set is {1, 2, ..., 2k} where the last player took k.  (The first turn can take any number aside from all.)");
 
 properties.addVariant(variant);
+
+
+//Subtraction variant: Partisan Subtraction Game
+var rulesetName = "Partisan Subtraction (Game)";
+var rulesetInfoHref = "https://arxiv.org/abs/2101.01595";
+var isImpartial = false;
+var isShortNode = RulesetProperties.createLengthNode(true);
+var winnerFromStart = "Varies";
+var computationalComplexity = createLink("NP-hard", "https://arxiv.org/abs/2101.01595");;
+var otherProperties = "";
+
+var variant = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial, isShortNode, winnerFromStart, computationalComplexity, otherProperties);
+
+variant.addBriefDescription("Subtraction where each player has their own subtraction set.");
+
+properties.addVariant(variant);
+
+
+//Subtraction variant: Subtract-a-square 
+var rulesetName = "Subtract a Square";
+var rulesetInfoHref = "https://en.wikipedia.org/wiki/Subtract_a_square";
+var isImpartial = true;
+var isShortNode = RulesetProperties.createLengthNode(true);
+var winnerFromStart = "Varies";
+var computationalComplexity = "";
+var otherProperties = "";
+
+var variant = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial, isShortNode, winnerFromStart, computationalComplexity, otherProperties);
+
+variant.addBriefDescription("Subtraction where the subtraction set is the set of squares, {1, 4, 9, 16, ...}.");
+
+properties.addVariant(variant);
  
+
+
+/////////////////////////
+// <T>
+
 
 ///////////////////////////////// 
 //Toads and Frogs
