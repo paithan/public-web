@@ -1254,14 +1254,14 @@ var rulesetInfoHref = "https://turing.plymouth.edu/~kgb1013/DB/combGames/popping
 var isImpartial = true;
 var isShortNode = RulesetProperties.createLengthNode(true);
 var winnerFromStart = document.createTextNode("First player from full grid.");
-var computationalComplexity = "unknown;
+var computationalComplexity = "unknown";
 var otherProperties = document.createTextNode(" ");
 
 var variant = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial, isShortNode, winnerFromStart, computationalComplexity, otherProperties);
 
 variant.addBriefDescription("Position is a grid of balloons, some popped.  A turn consists of popping either one balloon, two neighboring balloons, or any of the 1 to 4 remaining balloons in a square.");
 
-variant.addPlayableLink("https://turing.plymouth.edu/~kgb1013/DB/combGames/poppingBalloons.html", "JavaScript");
+variant.addPlayableLink("https://turing.plymouth.edu/~kgb1013/DB/combGames/poppingBalloons.html", "HTML");
 
 properties.addVariant(variant);
 
