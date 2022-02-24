@@ -1229,6 +1229,7 @@ properties.setImage("https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/I
 
 rulesetPropertiesList.push(properties);
 
+
 //Kayles variant: Bowling Kayles
 var rulesetName = "Bowling Kayles";
 var rulesetInfoHref = "https://www.gutenberg.org/files/27635/27635-h/27635-h.htm#Page_118";
@@ -1245,6 +1246,25 @@ variant.addBriefDescription("Played on a row of bowling pins.  Move: remove eith
 variant.addPlayableLink("http://www.cut-the-knot.org/Curriculum/Arithmetic/Kayles.shtml", "Java");
 
 properties.addVariant(variant);
+
+
+//Kayles variant: Popping Balloons
+var rulesetName = "Popping Balloons";
+var rulesetInfoHref = "https://turing.plymouth.edu/~kgb1013/DB/combGames/poppingBalloons.html";
+var isImpartial = true;
+var isShortNode = RulesetProperties.createLengthNode(true);
+var winnerFromStart = document.createTextNode("First player from full grid.");
+var computationalComplexity = "unknown;
+var otherProperties = document.createTextNode(" ");
+
+var variant = new RulesetProperties(rulesetName, rulesetInfoHref, isImpartial, isShortNode, winnerFromStart, computationalComplexity, otherProperties);
+
+variant.addBriefDescription("Position is a grid of balloons, some popped.  A turn consists of popping either one balloon, two neighboring balloons, or any of the 1 to 4 remaining balloons in a square.");
+
+variant.addPlayableLink("https://turing.plymouth.edu/~kgb1013/DB/combGames/poppingBalloons.html", "JavaScript");
+
+properties.addVariant(variant);
+
 
 //Kayles variant: Dawson's Kayles
 var rulesetName = "Dawson's Kayles";
